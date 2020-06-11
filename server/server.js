@@ -12,11 +12,11 @@ app.get('/', (req, res) => {
 })
 
 
-
 //redirects any unknown routes to a 404 status
 app.use('*', (req, res) =>{
     return res.status(404);
 });
+
 
 app.use((err, req, res, next) => {
     const defaultErr = {
